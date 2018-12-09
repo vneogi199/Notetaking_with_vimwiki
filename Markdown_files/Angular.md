@@ -15,7 +15,7 @@
 
 ## Bootstrapping the application:
 
-1. main.ts calls AppModule(app.module.ts)
-2. app.module.ts contains @NgModule which contains bootstrap array which defines the components that Angular must know before initializing index.html
-3. bootstrap array contains AppComponent(app.component.ts)
-4. app.component.ts contains @Component which contains selector which defines the tag where template/templateUrl will be injected
+1. **main.ts** calls **AppModule(app.module.ts)**
+2. **app.module.ts** contains **@NgModule** which contains **bootstrap array** which defines the components that Angular must know before initializing index.html
+3. **bootstrap array** contains **AppComponent(app.component.ts)**
+4. **app.component.ts** contains **@Component** which contains **selector** which defines the tag where **template/templateUrl** will be injected
