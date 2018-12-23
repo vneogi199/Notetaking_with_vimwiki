@@ -4,7 +4,7 @@
 4. [Arrow functions](#arrow-functions)
 5. [Promises/Asynchronous requests](#promisesasynchronous-requests)
 6. [Destructuring](#destructuring)
-7. [Concepts of components & state](#concepts-of-components-&-state)
+7. [Concepts of components & state](#concepts-of-components--state)
 8. [Spread operator](#spread-operator)
 9. [Higher order array functions](#higher-order-array-functions)
 
