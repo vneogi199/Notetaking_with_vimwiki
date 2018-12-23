@@ -69,14 +69,20 @@ Here, **templateUrl/template is compulsory.**
 
 Selector can also be an **attribute** on an HTML element.
 
-Eg: `selector: '[app-servers]'`
+Eg: 
+```typescript
+selector: '[app-servers]'
+```
 ```html
 <div app-servers></div>
 ```
 
 Selector can also be a **class** of an HTML element.
 
-Eg: `selector: '.app-servers'`
+Eg:
+```typescript
+selector: '.app-servers'
+```
 ```html
 <div class="app-servers"></div>
 ```
@@ -95,6 +101,27 @@ Modules have `@NgModule` decorator which contain following properties:
 * **imports**: imports other built-in/user-defined modules
 * **providers**: ? //TODO
 * **bootstrap**: which component will be used to bootstrap the application
+
+## Directives:
+Directives are instructions in the DOM (HTML). Directives can be with template or without template.
+Eg: `<app-servers></app-servers>` is a directive with a template. `<p appTurnGreen>Receives a green background` is a directive without template.
+
+### \*ngIf:
+\*ngIf works like an if statement. * indicates that it is a structural directive which means it will modify the DOM.
+Eg:
+```html
+<p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
+```
+Here, we check whether the value of `serverCreated` is true or false and based on this, the `<p>` element is shown.
+
+If we want to also perform an else condition here we can use:
+```html
+<p *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</p>
+<ng-template #noServer>
+  <p>No server was created</p>
+</ng-template>
+```
+
 
 ## Data binding:
 Data Binding is communication between Typescript code (Business Logic) and Template (HTML).
@@ -176,3 +203,23 @@ class="form-control"
 <p>{{ serverCreationStatus }}</p>
 ```
 Here, we have binded `onCreateServer` function to click event and passed value entered in input field to `onUpdateServerName` and display `serverName` on page. `$event` passes event related data to function (including value entered in input).
+
+
+### Two-Way Binding:
+
+In HTML:
+```html
+<input type="text"
+class="form-control"
+[(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+```
+
+In TS:
+```typescript
+  serverName = 'Test Server';
+```
+
+Here, we have performed two-way binding on the `serverName` variable. Change in input field will change variable value and change in variable value will change value on input field.
+
+
