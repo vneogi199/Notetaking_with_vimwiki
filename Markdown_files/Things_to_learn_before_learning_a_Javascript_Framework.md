@@ -2,7 +2,7 @@
 2. [Modules](#modules)
 3. [Classes](#classes)
 4. [Arrow functions](#arrow-functions)
-5. [Promises/Asynchronous requests](#promises/asynchronous-requests)
+5. [Promises/Asynchronous requests](#promisesasynchronous-requests)
 6. [Destructuring](#destructuring)
 7. [Concepts of components & state](#concepts-of-components-&-state)
 8. [Spread operator](#spread-operator)
